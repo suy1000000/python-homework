@@ -69,9 +69,9 @@ def rpsls(player_choice):
     # print out the message for computer's choice
     difference=(comp_number-player_number)%5
     # compute difference of comp_number and player_number modulo five
-    if (comp_number>=difference)and(comp_number!=player_number):
+    if (difference==1 or difference==2)and(comp_number!=player_number):
         print "Computer wins!"
-    elif (comp_number<difference)and(comp_number!=player_number):
+    elif (difference==3 or difference==4)and(comp_number!=player_number):
         print "Player wins!"
     else:
         print "Draw"
@@ -86,5 +86,3 @@ rpsls("lizard")
 rpsls("scissors")
 
 # always remember to check your completed program against the grading rubric
-
-
